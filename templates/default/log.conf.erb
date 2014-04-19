@@ -1,8 +1,8 @@
 log {
   <% for @source in @app.source %>
-    source("t_<%= @source %>");
+    source(t_<%= @source %>);
   <% end %>
   <% for @destination in @app.destination %>
-    destination("d_<%= @destination %>");
+    destination(d_<%= @destination %>);
   <% end %>
 };
