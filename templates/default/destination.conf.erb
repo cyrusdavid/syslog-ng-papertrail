@@ -4,4 +4,4 @@ destination d_<%= @app.name %> {
         port(<%= @app.udp.port %>)
       <%= ", template(t_#{@app.template}" if @app.template %>));
   <% end %>
-}
+};
