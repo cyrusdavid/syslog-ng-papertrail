@@ -6,6 +6,7 @@ action :add do
   systrail_destination new_resource.name do
     udp(host: 'logs.papertrailapp.com', port: new_resource.port)
     template new_resource.name
+    mark_mode new_resource.mark_mode
   end
   systrail_log new_resource.name do
     source [new_resource.name]
