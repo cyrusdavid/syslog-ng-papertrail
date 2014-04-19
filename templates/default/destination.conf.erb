@@ -1,4 +1,4 @@
-destination s_<%= @app.name %> {
+destination d_<%= @app.name %> {
   <% unless @app.udp.nil? %>
     udp("<%= @app.udp.host %>"
         port(<%= @app.udp.port %>)

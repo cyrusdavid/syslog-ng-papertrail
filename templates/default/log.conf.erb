@@ -1,9 +1,4 @@
 log {
-  source(s_<%= @app.name %>);
-  destination(d_<%= @app.name %>);
-};
-
-log {
   <% for @source in @app.source %>
     source("<%= @source %>");
   <% end %>
