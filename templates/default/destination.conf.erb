@@ -1,0 +1,7 @@
+destination s_<%= @app.name %> {
+  <% unless @app.udp.nil? %>
+    udp("<%= @app.udp.host %>"
+        port(<%= @app.udp.port %>)
+      <%= ", template(#{@app.template}" if @app.template %>));
+  <% end %>
+}

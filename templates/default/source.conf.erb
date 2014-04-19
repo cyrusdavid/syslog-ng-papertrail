@@ -1,0 +1,5 @@
+source s_<%= @app.name %> {
+  <% for @file in @app.files %>
+    file("<%= @file %>");
+  <% end %>
+}
