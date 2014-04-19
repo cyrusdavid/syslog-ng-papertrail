@@ -2,6 +2,6 @@ destination d_<%= @app.name %> {
   <% unless @app.udp.nil? %>
     udp("<%= @app.udp.host %>"
         port(<%= @app.udp.port %>)
-      <%= ", template(#{@app.template}" if @app.template %>));
+      <%= ", template(t_#{@app.template}" if @app.template %>));
   <% end %>
 }
