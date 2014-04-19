@@ -1,10 +1,10 @@
 action :add do
   systrail_template new_resource.name
   systrail_source new_resource.name do
-    files new_resource[:source]
+    files new_resource.source
   end
   systrail_destination new_resource.name do
-    udp(host: 'logs.papertrailapp.com', port: new_resource[:port])
+    udp(host: 'logs.papertrailapp.com', port: new_resource.port)
     template new_resource.name
   end
   systrail_log new_resource.name do
