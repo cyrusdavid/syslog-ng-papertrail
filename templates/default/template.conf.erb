@@ -2,7 +2,7 @@ template t_<%= @app.name %> {
   <% if @app.logentries && !@app.logentries_token.nil? %>
     template("<%= @app.logentries_token %> $ISODATE $HOST $MSG\n");
   <% elsif @app.papertrail || @app.template.nil? %>
-    template("$ISODATE $HOST <%= @app.name %>: $MSG\\n");
+    template("$ISODATE $HOST <%= @app.name %>: $MSG\n");
   <% else %>
     template(<%= @app.template %>);
   <% end %>
