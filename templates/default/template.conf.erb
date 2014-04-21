@@ -5,5 +5,5 @@ template t_<%= @app.name %> {
     template("<%= @app.logentries_token %> $ISODATE $HOST $MSG\n");
   <% else %>
     template(<%= @app.template %>);
-  <% endif %>
+  <% end %>
 };
