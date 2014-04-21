@@ -1,2 +1,2 @@
-name 'systrail'
+name 'syslog_ng'
 

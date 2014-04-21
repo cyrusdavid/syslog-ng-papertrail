@@ -6,4 +6,11 @@ destination d_<%= @app.name %> {
       <%= ", template(t_#{@app.template})" if @app.template %>
     );
   <% end %>
+  <% unless @app.tcp.nil? %>
+    tcp("<%= @app.tcp[:host] %>"
+        port(<%= @app.tcp[:port] %>)
+      ,  mark_mode(<%= @app.mark_mode %>)
+      <%= ", template(t_#{@app.template})" if @app.template %>
+    );
+  <% end %>
 };

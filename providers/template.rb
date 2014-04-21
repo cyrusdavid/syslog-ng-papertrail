@@ -1,6 +1,6 @@
 action :add do
   template "/etc/syslog-ng/conf.d/00-#{new_resource.name}.conf" do
-    cookbook "systrail"
+    cookbook "syslog_ng"
     source "template.conf.erb"
     variables(app: new_resource)
     notifies :reload, "service[syslog-ng]"
