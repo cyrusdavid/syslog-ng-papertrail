@@ -2,6 +2,7 @@ action :add do
   syslog_ng_template new_resource.name do
     logentries true
     logentries_token new_resource.token
+    template new_resource.template
   end
   syslog_ng_source new_resource.name do
     files new_resource.source

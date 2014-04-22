@@ -1,5 +1,7 @@
 action :add do
-  syslog_ng_template new_resource.name
+  syslog_ng_template new_resource.name do
+    template new_resource.template
+  end
   syslog_ng_source new_resource.name do
     files new_resource.source
   end
